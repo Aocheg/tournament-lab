@@ -1,10 +1,10 @@
-# TOURNAMENTLAB: Esports League Manager
+# TOURNAMENTLAB: Esports League Manager.
 
 > **A robust, mathematically fair, and tamper-proof esports league manager built with Python.**
 
 ---
 
-## 1. Project Overview & Mission
+## 1. Project Overview & Mission.
 
 TournamentLab is a professional command-line Esports League Manager designed to guarantee competitive fairness, data integrity, and deterministic ranking.
 
@@ -19,7 +19,7 @@ TournamentLab enforces strict tournament rules:
 
 ---
 
-## 2. Architecture & File Structure
+## 2. Architecture & File Structure.
 
 TournamentLab follows clean modular architecture, strictly adhering to standard library Python without external dependencies:
 
