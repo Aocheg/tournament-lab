@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "teams": [
+    {
+      "id": "TM001",
+      "name": "AOG fc"
+    },
+    {
+      "id": "TM002",
+      "name": "GO fc"
+    },
+    {
+      "id": "TM003",
+      "name": "Og fc"
+    },
+    {
+      "id": "TM004",
+      "name": "Ag fc"
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "M001",
+      "home_id": "TM001",
+      "away_id": "TM002",
+      "status": "played",
+      "home_score": 0,
+      "away_score": 2
+    },
+    {
+      "id": "M002",
+      "home_id": "TM001",
+      "away_id": "TM003",
+      "status": "played",
+      "home_score": 1,
+      "away_score": 3
+    },
+    {
+      "id": "M003",
+      "home_id": "TM001",
+      "away_id": "TM004",
+      "status": "played",
+      "home_score": 2,
+      "away_score": 0
+    },
+    {
+      "id": "M004",
+      "home_id": "TM002",
+      "away_id": "TM003",
+      "status": "played",
+      "home_score": 3,
+      "away_score": 4
+    },
+    {
+      "id": "M005",
+      "home_id": "TM002",
+      "away_id": "TM004",
+      "status": "played",
+      "home_score": 3,
+      "away_score": 4
+    },
+    {
+      "id": "M006",
+      "home_id": "TM003",
+      "away_id": "TM004",
+      "status": "played",
+      "home_score": 0,
+      "away_score": 4
+    }
+  ]
+}
