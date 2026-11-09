@@ -53,7 +53,7 @@ tournament-lab/
 
 ---
 
-## 3. Installation & Quick Start
+## 3. Installation & Quick Start.
 
 TournamentLab requires **Python 3.10+** (tested on Python 3.12). No third-party dependencies are needed.
 
@@ -68,7 +68,7 @@ python3 main.py season.json
 
 ---
 
-## 4. CLI Menu & Navigation
+## 4. CLI Menu & Navigation.
 
 When launched, TournamentLab displays an interactive menu with real-time status banners:
 
@@ -91,7 +91,7 @@ When launched, TournamentLab displays an interactive menu with real-time status 
 -----------------------------------------------------------------
 ```
 
-### Options Breakdown
+### Options Breakdown:
 1. **Register Team:** Prompts for team display name (2–30 characters). Strips surrounding whitespace and rejects case-insensitive duplicates.
 2. **List Registered Teams:** Displays all registered teams with their stable `TMxxx` IDs.
 3. **Generate Round-Robin Schedule:** Creates $N(N-1)/2$ pairings for 4–8 registered teams. Enforces single generation per season.
@@ -106,7 +106,7 @@ When launched, TournamentLab displays an interactive menu with real-time status 
 
 ---
 
-## 5. Tournament Rules & Mathematical Invariants
+## 5. Tournament Rules & Mathematical Invariants.
 
 ### 1. Scoring System
 - **Win:** 3 points
@@ -133,7 +133,7 @@ When two or more teams have identical points, TournamentLab breaks ties predicta
 
 ---
 
-## 6. Controlled Demonstration Dataset Walkthrough
+## 6. Controlled Demonstration Dataset Walkthrough.
 
 TournamentLab includes a verified walkthrough replicating the Stage 4 benchmark:
 
