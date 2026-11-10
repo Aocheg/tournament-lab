@@ -21,7 +21,22 @@ TournamentLab enforces strict tournament rules:
 
 ## 2. Architecture & File Structure
 
-TournamentLab follows clean modular architecture, strictly adhering to standard library Python without external dependencies:
+TournamentLab follows clean modular architecture, strictly adhering to standard library Python without external dependencies:## 9. Technical Defence Guide (Audit Preparation)
+
+When defending TournamentLab during your technical audit, be prepared to answer:
+
+1. **How does fixture generation avoid duplicates and self-matches?**
+   - *Answer:* We use an upper-triangular double loop: for $i$ in $0 \dots N-1$, for $j$ in $i+1 \dots N-1$. Because $j > i$ strictly, $i$ can never equal $j$ (no self-matches). Because each pair $(i, j)$ is visited once with $i < j$, reverse duplicates $(j, i)$ are never generated.
+2. **Why should standings be computed dynamically instead of stored?**
+   - *Answer:* Played fixtures are the single source of truth. Maintaining a parallel mutable standings table introduces state synchronization risks (drift). Dynamic computation is a pure, idempotent function with negligible execution cost ($<0.001$ seconds for 28 matches).
+3. **Why does Python accept `True` as an integer and how did you prevent it?**
+   - *Answer:* In Python, `bool` is a subclass of `int`. Hence `isinstance(True, int)` is `True`. We implemented `is_strict_non_negative_int()` which explicitly rejects boolean instances using `not isinstance(val, bool) and type(val) is int and val >= 0`.
+4. **How does load validation prevent memory corruption?**
+   - *Answer:* TournamentLab follows the *validate-before-mutate* pattern. When loading a file, data is parsed into a temporary staging dictionary and thoroughly audited (schema, team constraints, referential integrity of fixture IDs, status/score parity). If any check fails, `StorageError` is raised before active memory is touched.
+5. **How did you sort multi-key criteria with mixed ascending and descending directions?**
+   - *Answer:* We avoided `reverse=True` (which would sort team names backwards) and instead used sign inversion for numeric values:
+     `(-points, -goal_difference, -goals_for, name.strip().casefold())`.
+
 
 ```
 tournament-lab/
