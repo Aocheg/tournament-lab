@@ -172,7 +172,7 @@ TournamentLab includes a verified walkthrough replicating the Stage 4 benchmark:
 
 ---
 
-## 7. Automated Test Suite.
+## 7. Automated Test Suite
 
 The test suite covers **38 comprehensive unit and integration tests** testing all 16 required rubric scenarios:
 
@@ -250,7 +250,7 @@ OK
 
 ---
 
-## 8. Professional Git Workflow & Branch History.
+## 8. Professional Git Workflow & Branch History
 
 TournamentLab was engineered following strict team practices with two distinct engineering roles:
 
